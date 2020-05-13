@@ -3,7 +3,7 @@ package ru.netology.repository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
-import ru.netology.domain.NotFoundException;
+import ru.netology.exception.NotFoundException;
 import ru.netology.domain.Product;
 import ru.netology.domain.TShirt;
 
@@ -35,4 +35,5 @@ class ProductRepositoryTest {
     public void removeByIdException() {
         assertThrows(NotFoundException.class, () -> repository.removeById(2));
     }
+
 }
